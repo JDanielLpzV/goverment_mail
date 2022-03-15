@@ -11,9 +11,9 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div id="main">
+      <div id="main" className="container">
         <SearchBar />
-        <div>{this.state.area}</div>
+        <div className="fs-4">{this.state.area}</div>
         <Categories />
       </div>
     );
