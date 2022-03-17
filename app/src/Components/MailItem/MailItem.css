@@ -15,3 +15,12 @@ p {
   font-weight: 600;
   color: red;
 }
+.contentM {
+  width: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.imgStatus {
+  margin-left: 80%;
+}
