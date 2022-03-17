@@ -1,13 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./SideBar.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-class SideBar extends React.Component {
-  componentDidMount() {}
-  componentWillUnmount() {}
-  render() {
-    return <div>Side Bar</div>;
-  }
+export default function SideBar({ setSelectedMode }) {
+  const OnButtonClick = (mode) => {
+    setSelectedMode(mode);
+  };
+  return (
+    <Container fluid className="side-bar">
+      <Row>
+        <Col xs={12}>
+          <button onClick={() => OnButtonClick("Principal")}>Principal</button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <button onClick={() => OnButtonClick("Historico")}>Historico</button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <button onClick={() => OnButtonClick("Archivado")}>Archivado</button>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
-ReactDOM.render(<SideBar />, document.getElementById("root"));
-export default SideBar;

@@ -1,0 +1,8 @@
+.side-bar {
+  background-color: red;
+  height: 100%;
+  padding: 0 !important;
+}
+button {
+  width: 100%;
+}
