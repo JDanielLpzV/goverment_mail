@@ -5,8 +5,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import preferences from "../../assets/equalizer.png";
-export default function SearchBar() {
-  const OnButtonClick = (text) => {};
+
+export default function SearchBar({ setSearchTerm }) {
+  const OnButtonClick = (text) => {
+    setSearchTerm(text);
+  };
   return (
     <Container fluid className=" search">
       <Row className="rsb">
@@ -17,7 +20,7 @@ export default function SearchBar() {
           <input
             className="search-input"
             type="text"
-            placeholder="Buscar en toda la correspondencia"
+            placeholder="Buscar remitente en la correspondencia"
             onChange={(event) => {
               OnButtonClick(event.target.value);
             }}
