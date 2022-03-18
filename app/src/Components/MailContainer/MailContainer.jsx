@@ -27,6 +27,7 @@ export default function MailContainer({ selectedMode }) {
   const f1 = (val) => {
     switch (selectedMode) {
       case "Principal":
+      case "Recibidos":
         if (
           val.area === "Paquetería" ||
           val.area === "Oficio" ||
@@ -36,12 +37,12 @@ export default function MailContainer({ selectedMode }) {
           return val;
         }
         break;
-      case "Archivado":
+      case "Historico":
         if (val.area === "Archivado") {
           return val;
         }
         break;
-      case "Historico":
+      case "Enviados":
         if (val.area === "Enviado" || val.area === "En Proceso") {
           return val;
         }

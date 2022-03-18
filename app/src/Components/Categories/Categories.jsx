@@ -8,7 +8,7 @@ export default function Categories({ setSelectedButton, selectedMode }) {
   function clickOn(val) {
     setSelectedButton(val);
   }
-  if (selectedMode === "Principal") {
+  if (selectedMode === "Principal" || selectedMode === "Recibidos") {
     buttons = (
       <ButtonGroup
         onClick={(evt) => {
@@ -33,21 +33,21 @@ export default function Categories({ setSelectedButton, selectedMode }) {
         </Button>
       </ButtonGroup>
     );
-  } else if (selectedMode === "Historico") {
+  } else if (selectedMode === "Enviados") {
     buttons = (
       <ButtonGroup
         onClick={(evt) => {
           clickOn(evt.target.value);
         }}
-        aria-label="Historico"
+        aria-label="Enviado"
       >
-        <Button className="bHistorico" variant="primary" value="">
+        <Button className="bEnviado" variant="primary" value="">
           Todos
         </Button>
-        <Button className="bHistorico" variant="danger" value="En Proceso">
+        <Button className="bEnviado" variant="danger" value="En Proceso">
           En Proceso
         </Button>
-        <Button className="bHistorico" variant="warning" value="Enviado">
+        <Button className="bEnviado" variant="warning" value="Enviado">
           Enviados
         </Button>
       </ButtonGroup>

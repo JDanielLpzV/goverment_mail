@@ -17,12 +17,17 @@ export default function SideBar({ setSelectedMode }) {
       </Row>
       <Row>
         <Col>
-          <button onClick={() => OnButtonClick("Historico")}>Historico</button>
+          <button onClick={() => OnButtonClick("Enviados")}>Enviados</button>
         </Col>
       </Row>
       <Row>
         <Col>
-          <button onClick={() => OnButtonClick("Archivado")}>Archivado</button>
+          <button onClick={() => OnButtonClick("Recibidos")}>Recibidos</button>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <button onClick={() => OnButtonClick("Historico")}>Historico</button>
         </Col>
       </Row>
     </Container>
