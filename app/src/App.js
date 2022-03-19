@@ -21,7 +21,7 @@ function App() {
         <Col className="side" xs md lg="2">
           <SideBar setSelectedMode={setSelectedMode} />
         </Col>
-        <Col xs={10}>
+        <Col className="main-container" xs={10}>
           <MailContainer selectedMode={selectedMode} />
         </Col>
       </Row>
